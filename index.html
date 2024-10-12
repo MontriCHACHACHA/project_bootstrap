@@ -1,3 +1,5 @@
+<!-- 
+   # ต้องการใช้ php ต้องเปลี่ยนเป็น index.php
 <?php 
 session_start(); // เรียกใช้ session_start() ที่จุดเริ่มต้นของไฟล์
 $message = ''; // ตัวแปรเก็บข้อความ
@@ -16,9 +18,7 @@ if (isset($_SESSION['username'])) {
 }
 
 include('db_connect.php');
-
-
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +51,7 @@ include('db_connect.php');
     <div class="container-lg">
 
         <nav class="navbar navbar-expand-lg navbar-light py-3  px-4 fixed-top bg-light">
-            <a class="navbar-brand color5 fs-3 fw-bold" href="index.php"><img src="./image2/logo (1).png" alt="" /></a>
+            <a class="navbar-brand color5 fs-3 fw-bold" href="index.html"><img src="./image2/logo (1).png" alt="" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -70,7 +70,7 @@ include('db_connect.php');
                         </div>
                     </li>
                     <li class="py-2">
-                        <a class="nav-link color3 texthv" aria-current="page" href="index.php">Home</a>
+                        <a class="nav-link color3 texthv" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="py-2">
                         <a class="nav-link color3 texthv" href="browse.html">Browse</a>
@@ -105,7 +105,7 @@ include('db_connect.php');
                 style="border-radius: 30px; background-image: url('./image2/banner-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
                 <div class="m-3 m-md-2 py-md-4 text-center col-md-12">
                     <p class="text-light fs-4 ">Welcome To Cyborg</p>
-                    <p><?php echo $message ?></p>
+                    <!-- <p><?php echo $message ?></p> -->
 
                     <h4 class="fw-bold text-uppercase text-light" style="font-size: 40px;"><span
                             style="color: #E75E8D;">Browse</span> Our Popular Games Here</h4>
@@ -115,7 +115,7 @@ include('db_connect.php');
                     <button class=" px-4 py-2 border-0 mt-3 btnhv2" type="button" data-bs-toggle="modal"
                         data-bs-target="#RegisterModal"
                         style="background-color: #E75E8D; color: #fff; border-radius: 30px;">Register Now</button>
-                    <?php include('modal.php') ?>
+                    <!-- <?php include('modal.php') ?> -->
                 </div>
             </div>
 
