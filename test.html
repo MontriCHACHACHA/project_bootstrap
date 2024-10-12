@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Transition with JavaScript</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 200vh; /* ความสูงเพื่อเลื่อนดู */
+      background-color: #9f0000;
+    }
+
+    .child {
+      opacity: 0; /* เริ่มต้นที่ความโปร่งใส 0 */
+      transform: translateY(20px); /* เลื่อนลงมาจากตำแหน่งเดิม */
+      transition: opacity 0.6s ease, transform 0.6s ease; /* กำหนด transition */
+      padding: 20px;
+      background-color: #3498db;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      height: 200px;
+    }
+
+    .child.show {
+      opacity: 1; /* เปลี่ยนเป็นความโปร่งใส 1 เมื่อแสดง */
+      transform: translateY(0); /* กลับไปยังตำแหน่งเดิม */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="child">Child 1</div>
+  <div class="child">Child 2</div>
+  <div class="child">Child 3</div>
+  <div class="child">Child 1</div>
+  <div class="child">Child 2</div>
+  <div class="child">Child 3</div>
+  <div class="child">Child 1</div>
+  <div class="child">Child 2</div>
+  <div class="child">Child 3</div>
+
+  <script>
+    // สร้าง Intersection Observer
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show'); // เพิ่มคลาส show
+        }
+      });
+    });
+
+    // เลือก div child ทั้งหมดและเริ่มต้น observer
+    const children = document.querySelectorAll('.child');
+    children.forEach(child => {
+      observer.observe(child); // สังเกต div child แต่ละตัว
+    });
+  </script>
+
+</body>
+</html>

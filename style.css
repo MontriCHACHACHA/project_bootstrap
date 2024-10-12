@@ -1,0 +1,151 @@
+.color1 {
+  background-color: #27292a;
+}
+
+.color2 {
+  color: #212529;
+}
+
+.color3 {
+  color: #666;
+}
+
+.color4 {
+  background-color: #1f2122;
+}
+
+.color5 {
+  color: #e75e8d;
+}
+
+li {
+  padding: 0 15px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding-top: 110px;
+}
+.btnhv {
+  transition: all 0.3s;
+}
+.btnhv:hover {
+  color: #e75e8d;
+  background-color: #ffffff;
+}
+.btnhv2 {
+  transition: all 0.3s;
+}
+.btnhv2:hover {
+  color: #e75e8d !important;
+  background-color: #ffffff !important;
+}
+.texthv:hover {
+  color: #e75e8d;
+}
+.btn-profile:hover {
+  color: #fff;
+  background-color: #e75e8d;
+}
+.btnhv3 {
+  color: #e75e8d;
+  border: 1px #e75e8d solid;
+  background-color: #1f2122;
+  border-radius: 25px;
+  padding: 10px;
+}
+.btnhv3:hover {
+  background-color: #fff;
+  border: none;
+  transition: all 0.5s;
+}
+.btn4 {
+  color: #fff;
+  background-color: #e75e8d;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 50px;
+}
+
+li{
+    padding: 10px;
+}
+
+/* กำหนดสไตล์สำหรับ hover */
+.hover-ef:hover {
+  color: #e75e8d !important;
+  background-color: #ffffff !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.navbar-collapse{
+  transition: all 0.5s ease !important;
+}
+
+input:focus {
+  border-color: #e75e8d !important;
+  outline: none;
+}
+
+input:hover {
+  border-color: #e75e8d !important;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.btn-login{
+  color: #fff;
+  background-color: #e75e8d;
+
+}
+.btn-login:hover{
+  color: #fff;
+  background-color: #ec427e;
+}
+@media (min-width: 380px) and (max-width: 1600px) {
+  nav {
+    width: 100%;
+    background-color: #fff !important;
+    top: 0;
+  }
+  
+  div>input{
+    background-color: #fff !important;
+    border: 1px solid #1f2122 !important;
+    
+  }
+  input::placeholder{
+    color: #393939;
+  }
+
+  .child {
+    opacity: 0; /* เริ่มต้นที่ความโปร่งใส 0 */
+    transition: opacity 0.9s ease, transform 0.9s ease; /* กำหนด transition */
+  }
+
+  .child.show {
+    opacity: 1; /* เปลี่ยนเป็นความโปร่งใส 1 เมื่อแสดง */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+  .div-profile{
+    height: 300px !important;
+    width: 100% !important;
+    overflow: hidden;
+  }
+  .div-profile>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+}
+
